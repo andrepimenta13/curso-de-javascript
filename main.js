@@ -1,45 +1,31 @@
-const names = ['Felipe', 'João', 'Julia', 10, false];
+//Map - fazer determinada função em cada item do array e retornar um novo array
+
+const numbers = [1, 2, 3, 4, 5];
+console.log(numbers);
+
+const numbersMultipliedByTwo = numbers.map(function (number) {
+    return number * 2 //multiplicar cada elemento do array por 2.
+});
+
+console.log(numbersMultipliedByTwo);
 
 
-//acessar o 2o elemento da lista
+//Filter - Vai filtrar um array e retornar outro array novo baseado no filtro que passamos.
 
-const joao = names[1]
-console.log(joao)
+const ages = [8, 13, 27, 30, 22, 40];
 
-//adicionar elemento no final do array
+const evenAges = ages.filter(function (age) {
+    return age % 2 === 0 //verifica se é par e se for, adiciona a um novo array
+});
 
-names.push('Pedro')
-console.log(names)
+console.log(evenAges);
 
-//adicionar elemento no inicio do array
 
-names.unshift('Fernanda')
-console.log(names)
+//Reduce - é útil quando precisamos reduzir todos os valores de um array para um só. 
+//Ex: somar todos os valores de um array.
 
-//Remover o ultimo valor do array
+const sumOfAges = ages.reduce(function (age, accumulator) {
+    return accumulator * age //aqui é feita a soma de todos os elementos do array
+}, 1); //aqui colocamos o accumulator a iniciar a 0
 
-names.pop()
-console.log(names)
-
-//Editar uma posição do array
-
-names[3] = 'Gustavo'
-console.log(names)
-
-//Saber o indice/posição de algum elemento num array
-
-console.log(names.indexOf('Felipe'));
-
-//Ordenar a lista de um Array
-
-const sortedNames = names.sort();
-console.log(sortedNames);
-
-//Saber o tamanho de um Array
-
-console.log(names.length)
-
-//Validar se uma variável é um Array
-
-const namesIsArray = Array.isArray(names)
-console.log(namesIsArray)
+console.log(sumOfAges);
