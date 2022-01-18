@@ -12,4 +12,4 @@ const sumArrow = (a, b = 10) => {
     return a + b;
 };
 
-console.log(sumArrow(3))
+console.log(sumArrow(3));
