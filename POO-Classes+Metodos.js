@@ -36,5 +36,3 @@ person2.getFullName(); //chamar o método para a person2
 //colocamos a palavra static antes do nome do método (ver exemplo do speak acima)
 
 Person.speak(); //como é um método static, só podemos executar pela classe Person!
-
-//continuar 5:00m
